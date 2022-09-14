@@ -1,0 +1,48 @@
+def printmenu():
+    print('-----Menu-----')
+    print('1 = Encryption')
+    print('2 = Decryption')
+    print('3 = Exit program')
+x=True
+while x :
+    printmenu()
+    choice=int(input("Enter Your function - "))
+    if choice == 1:
+        def encrypt():
+            plaintxt = input("Input your plaintext - ")
+            plaintxt = plaintxt.upper()
+            pla_int = ord(plaintxt)
+            key = input("Input Key - ")
+            key = key.upper()
+            key_int = ord(key)
+            print(pla_int)
+            print(key_int)
+            Pi=pla_int%65
+            Ki=key_int%65
+            print(Pi)
+            print(Ki)
+            Ei=(Pi+Ki)%26
+            print("Encrypted an alphabet is ",chr(Ei+65))
+        encrypt()
+    elif choice ==2:
+        def decrypt():
+            plaintxt = input("Input your plaintext - ")
+            plaintxt = plaintxt.upper()
+            pla_int = ord(plaintxt)
+            key = input("Input Key - ")
+            key = key.upper()
+            key_int = ord(key)
+            print(pla_int)
+            print(key_int)
+            Pi=pla_int%65
+            Ki=key_int%65
+            print(Pi)
+            print(Ki)
+            Di=(Pi-Ki)%26
+            print("Decrypted an alphabet is ",chr(Di+65))
+        decrypt()  
+    elif choice ==3:
+        print('Good Bye')       
+else :
+    x=False
+    
